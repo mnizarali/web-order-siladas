@@ -1,0 +1,141 @@
+:root {
+    --color-primry: purple;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #000;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    min-height: 2000px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-item {
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+}
+
+#checkbox {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#checkbox:checked ~ .ham-item:nth-child(2) {
+    transform: rotate(45deg) translate(0, .5px);
+}
+#checkbox:checked ~ .ham-item:nth-child(3) {
+    transform: scale(0);
+}
+#checkbox:checked ~ .ham-item:nth-child(4) {
+    transform: rotate(-45deg) translate(-2px, 0px);
+}
+
+.ham-item {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin: 5px 0;
+    transition: .3s ease;
+    transform-origin: 0 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primry);
+    padding-inline: 30px;
+}
+
+.resepsionis {
+    color: #fff;
+    position: relative;
+}
+
+.baso {
+    width: 350px;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.btn-wa {
+    background: linear-gradient(to right, #ff8d24, #bcc905);
+    padding: 10px 30px;
+    margin-top: 10px;
+    position: absolute;
+    color: #fff;
+    border-radius: 300px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* breakpoint */
+
+/* laptop */
+@media screen and (max-width: 992px) {
+    
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .image-header {
+        display: none;
+    }
+}
